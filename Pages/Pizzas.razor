@@ -1,0 +1,25 @@
+﻿@page "/pizzas"
+@using BlazingPizza.Data
+@inject PizzaService PizzaSvc
+
+<h1>Choose your pizza</h1>
+
+<p>We have all these delicious recipes:</p>
+
+@if (todaysPizzas == null)
+{
+    <p>We're finding out what pizzas are available today...</p>
+}
+else
+{
+    @* "Hello" *@
+}
+
+@code{
+    private BlazingPizza.Pizza[] todaysPizzas;
+
+@*     protected new async Task OnInitializedAsync()
+    {
+        todaysPizzas = await BlazingPizza.Data.GetPizzasAsync();
+    } *@
+}
